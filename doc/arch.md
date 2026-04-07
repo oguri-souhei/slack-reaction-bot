@@ -2,7 +2,7 @@
 
 ## 概要
 
-Slack 上で感謝・了承を表すメッセージ（「ありがとうございます」など）が投稿された際に、自動でリアクション（スタンプ）を付与する Bot。
+Slack上で感謝・了承を表すメッセージ（「ありがとうございます」など）が投稿された際に、自動でリアクション（スタンプ）を付与するBot。
 
 ---
 
@@ -36,8 +36,8 @@ slack-auto-reaction/
 
 ## 環境変数 (.env)
 
-| 変数名            | 説明                 | 例                  |
-| ----------------- | -------------------- | ------------------- |
+| 変数名 | 説明 | 例 |
+|---|---|---|
 | `SLACK_BOT_TOKEN` | Bot User OAuth Token | `xoxb-xxxxxxxxxxxx` |
 
 ---
@@ -77,7 +77,7 @@ PATTERNS = [
 
 #### リアクション候補
 
-以下からランダムに 1 つ選択して付与する。
+以下からランダムに1つ選択して付与する。
 
 ```python
 REACTIONS = ["pray", "thumbsup", "clap", "muscle", "raised_hands"]
@@ -120,12 +120,12 @@ REACTIONS = ["pray", "thumbsup", "clap", "muscle", "raised_hands"]
 
 `OAuth & Permissions` → `Bot Token Scopes` に以下を追加:
 
-| Scope              | 用途                                           |
-| ------------------ | ---------------------------------------------- |
-| `reactions:write`  | スタンプの付与                                 |
-| `channels:history` | パブリックチャンネルのメッセージ受信           |
-| `im:history`       | DM のメッセージ受信                            |
-| `groups:history`   | プライベートチャンネルのメッセージ受信（任意） |
+| Scope | 用途 |
+|---|---|
+| `reactions:write` | スタンプの付与 |
+| `channels:history` | パブリックチャンネルのメッセージ受信 |
+| `im:history` | DM のメッセージ受信 |
+| `groups:history` | プライベートチャンネルのメッセージ受信（任意） |
 
 ### 3. Event Subscriptions の設定
 
